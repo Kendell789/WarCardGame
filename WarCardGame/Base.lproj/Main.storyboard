@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WarCardGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="q3v-sK-vAO">
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Qhy-Uh-svX">
+                                <rect key="frame" x="153" y="10" width="122" height="67"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="vOj-TY-ZRs"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="vOj-TY-ZRs"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="vOj-TY-ZRs"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="7gH-1W-wZn" userLabel="Card And Button Stack View">
+                                <rect key="frame" x="79" y="340.66666666666669" width="270" height="231.00000000000006"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="OPv-0B-9OZ" userLabel="Cards Stack view">
+                                        <rect key="frame" x="0.0" y="0.0" width="270" height="170"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="C4g-tu-BFr">
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="170"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="ySl-yp-ota">
+                                                <rect key="frame" x="150" y="0.0" width="120" height="170"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="avP-JB-Yu6" userLabel="Deal Button">
+                                        <rect key="frame" x="94.333333333333343" y="199.99999999999994" width="81.666666666666657" height="31"/>
+                                        <state key="normal" image="dealbutton"/>
+                                        <connections>
+                                            <action selector="dealTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HNi-sg-XTK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <variation key="heightClass=compact-widthClass=compact" spacing="20"/>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="wrR-Ys-VQU" userLabel="Player Score Stack View">
+                                <rect key="frame" x="19.999999999999996" y="749.66666666666663" width="46.666666666666657" height="68.333333333333371"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xyy-cv-zKC">
+                                        <rect key="frame" x="0.0" y="0.0" width="46.666666666666664" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gif-td-XfQ">
+                                        <rect key="frame" x="0.0" y="20.333333333333371" width="24.666666666666668" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="Lm0-tL-2el" userLabel="CPU Score Stack View">
+                                <rect key="frame" x="373.66666666666669" y="749.66666666666663" width="34.333333333333314" height="68.333333333333371"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CPU" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJE-eh-yTq">
+                                        <rect key="frame" x="0.0" y="0.0" width="34.333333333333336" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJI-Fn-CnS">
+                                        <rect key="frame" x="9.6666666666666305" y="20.333333333333371" width="24.666666666666671" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Qhy-Uh-svX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="GCH-Cf-OEV"/>
+                            <constraint firstItem="wrR-Ys-VQU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="R71-4W-dMl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Lm0-tL-2el" secondAttribute="bottom" constant="20" id="RbA-HT-k4a"/>
+                            <constraint firstAttribute="trailing" secondItem="q3v-sK-vAO" secondAttribute="trailing" id="Rfc-LV-sPV"/>
+                            <constraint firstItem="Qhy-Uh-svX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WLd-kq-6qp"/>
+                            <constraint firstItem="q3v-sK-vAO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Xav-At-ttP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wrR-Ys-VQU" secondAttribute="bottom" constant="20" id="dSg-ia-bK4"/>
+                            <constraint firstItem="7gH-1W-wZn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="djs-RL-M2O"/>
+                            <constraint firstItem="7gH-1W-wZn" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="20" id="kfW-y9-CAb">
+                                <variation key="heightClass=compact-widthClass=compact" constant="30"/>
+                            </constraint>
+                            <constraint firstItem="q3v-sK-vAO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="sww-c9-mSc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Lm0-tL-2el" secondAttribute="trailing" constant="20" id="uhN-md-6ca"/>
+                            <constraint firstAttribute="bottom" secondItem="q3v-sK-vAO" secondAttribute="bottom" id="w6y-b5-cbb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="124-zZ-2UC"/>
+                    <connections>
+                        <outlet property="dealButton" destination="avP-JB-Yu6" id="mzE-Nr-IGm"/>
+                        <outlet property="leftImageView" destination="C4g-tu-BFr" id="dif-Md-oGI"/>
+                        <outlet property="leftScoreLabel" destination="Gif-td-XfQ" id="fvR-64-o6b"/>
+                        <outlet property="rightImageView" destination="ySl-yp-ota" id="O2H-gQ-5Mr"/>
+                        <outlet property="rightScoreLabel" destination="hJI-Fn-CnS" id="4RC-4z-R1G"/>
+                        <segue destination="qEf-0k-VAm" kind="show" identifier="firstSegue" id="tyX-Ru-TH9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="93.75"/>
+        </scene>
+        <!--Draw Battle-->
+        <scene sceneID="z8u-Ti-o4K">
+            <objects>
+                <viewController storyboardIdentifier="drawBattle" id="qEf-0k-VAm" customClass="drawBattle" customModule="WarCardGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jkQ-sU-JRd">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="AOg-my-Ab9">
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="R1G-jH-iyw">
+                                <rect key="frame" x="153" y="10" width="122" height="67"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Obr-vA-jkQ" userLabel="Cards View">
+                                <rect key="frame" x="20" y="40" width="388" height="792"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="aim-KU-gfG" userLabel="leftCards">
+                                        <rect key="frame" x="0.0" y="0.0" width="137.33333333333334" height="792"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="Inj-lr-Oob" userLabel="firstCardL">
+                                                <rect key="frame" x="0.0" y="0.0" width="137.33333333333334" height="190.66666666666666"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="L6D-rC-LiR" userLabel="secondCardL">
+                                                <rect key="frame" x="0.0" y="200.66666666666663" width="137.33333333333334" height="190.33333333333337"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="YB7-Ie-Bgv" userLabel="thirdCardL">
+                                                <rect key="frame" x="0.0" y="401" width="137.33333333333334" height="190.66666666666663"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="hl4-mY-bQb" userLabel="fourthCardL">
+                                                <rect key="frame" x="0.0" y="601.66666666666663" width="137.33333333333334" height="190.33333333333337"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="m3Z-Oe-X2M" userLabel="wordPlay">
+                                        <rect key="frame" x="137.33333333333334" y="0.0" width="113.33333333333334" height="792"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4lX-Ve-PZZ" userLabel="I">
+                                                <rect key="frame" x="0.0" y="0.0" width="113.33333333333333" height="198"/>
+                                                <gestureRecognizers/>
+                                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="30"/>
+                                                <color key="textColor" systemColor="systemRedColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="De" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eia-ad-EnU" userLabel="De">
+                                                <rect key="frame" x="0.0" y="198" width="113.33333333333333" height="198"/>
+                                                <gestureRecognizers/>
+                                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="30"/>
+                                                <color key="textColor" systemColor="systemRedColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="claire" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zyy-6X-5lp" userLabel="clair">
+                                                <rect key="frame" x="0.0" y="396" width="113.33333333333333" height="198"/>
+                                                <gestureRecognizers/>
+                                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="30"/>
+                                                <color key="textColor" systemColor="systemRedColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WAR!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4CL-Df-grV" userLabel="WAR!">
+                                                <rect key="frame" x="0.0" y="594" width="113.33333333333333" height="198"/>
+                                                <gestureRecognizers/>
+                                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="30"/>
+                                                <color key="textColor" systemColor="systemRedColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CtX-6M-5xO" userLabel="rightCards">
+                                        <rect key="frame" x="250.66666666666669" y="0.0" width="137.33333333333331" height="792"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="FKY-k0-Mgq" userLabel="firstCardR">
+                                                <rect key="frame" x="0.0" y="0.0" width="137.33333333333334" height="190.66666666666666"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="oKe-it-7nJ" userLabel="secondCardR">
+                                                <rect key="frame" x="0.0" y="200.66666666666663" width="137.33333333333334" height="190.33333333333337"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="Mkq-fA-BJr" userLabel="thirdCardR">
+                                                <rect key="frame" x="0.0" y="401" width="137.33333333333334" height="190.66666666666663"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="bQl-IL-ChU" userLabel="fourthCardR">
+                                                <rect key="frame" x="0.0" y="601.66666666666663" width="137.33333333333334" height="190.33333333333337"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="i37-Gb-efU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Obr-vA-jkQ" firstAttribute="centerY" secondItem="jkQ-sU-JRd" secondAttribute="centerY" id="1lh-Ak-SvQ"/>
+                            <constraint firstItem="AOg-my-Ab9" firstAttribute="top" secondItem="jkQ-sU-JRd" secondAttribute="top" id="KhG-rH-6Oy"/>
+                            <constraint firstItem="R1G-jH-iyw" firstAttribute="top" secondItem="jkQ-sU-JRd" secondAttribute="top" constant="10" id="MSs-ur-k3k"/>
+                            <constraint firstItem="Obr-vA-jkQ" firstAttribute="leading" secondItem="jkQ-sU-JRd" secondAttribute="leading" constant="20" id="QFZ-CD-saw"/>
+                            <constraint firstItem="R1G-jH-iyw" firstAttribute="centerX" secondItem="jkQ-sU-JRd" secondAttribute="centerX" id="S0u-Bt-5iC"/>
+                            <constraint firstItem="AOg-my-Ab9" firstAttribute="leading" secondItem="jkQ-sU-JRd" secondAttribute="leading" id="W8U-3T-yWt"/>
+                            <constraint firstAttribute="trailing" secondItem="Obr-vA-jkQ" secondAttribute="trailing" constant="20" id="hwh-4f-Acn"/>
+                            <constraint firstItem="Obr-vA-jkQ" firstAttribute="centerX" secondItem="jkQ-sU-JRd" secondAttribute="centerX" id="mej-wz-TSv"/>
+                            <constraint firstAttribute="trailing" secondItem="AOg-my-Ab9" secondAttribute="trailing" id="ry6-se-Ofq"/>
+                            <constraint firstAttribute="bottom" secondItem="Obr-vA-jkQ" secondAttribute="bottom" constant="40" id="sM8-Gz-w4X"/>
+                            <constraint firstAttribute="bottom" secondItem="AOg-my-Ab9" secondAttribute="bottom" id="vuq-3U-xo9"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="32K-Fh-IW1" appends="YES" id="TPw-f1-eqd"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="dgy-Xc-Jia"/>
+                    <connections>
+                        <outlet property="De" destination="Eia-ad-EnU" id="mLe-zC-nFE"/>
+                        <outlet property="I" destination="4lX-Ve-PZZ" id="2Pe-BZ-Twb"/>
+                        <outlet property="WAR" destination="4CL-Df-grV" id="klY-Kj-OTr"/>
+                        <outlet property="clair" destination="zyy-6X-5lp" id="XMd-fW-4bw"/>
+                        <outlet property="firstCardL" destination="Inj-lr-Oob" id="h48-JG-n4e"/>
+                        <outlet property="firstCardR" destination="FKY-k0-Mgq" id="dac-9H-1Q3"/>
+                        <outlet property="fourthCardL" destination="hl4-mY-bQb" id="jVZ-G9-h8u"/>
+                        <outlet property="fourthCardR" destination="bQl-IL-ChU" id="wfH-Im-Z3a"/>
+                        <outlet property="secondCardL" destination="L6D-rC-LiR" id="VUZ-wV-W64"/>
+                        <outlet property="secondCardR" destination="oKe-it-7nJ" id="7GN-Ep-r3h"/>
+                        <outlet property="thirdCardL" destination="YB7-Ie-Bgv" id="QpS-VT-XnD"/>
+                        <outlet property="thirdCardR" destination="Mkq-fA-BJr" id="Sko-y1-GeM"/>
+                        <segue destination="7is-T4-ej7" kind="show" identifier="winSegue" id="Kw9-IJ-Sed"/>
+                        <segue destination="6O1-vc-G7C" kind="show" identifier="lossSegue" id="R85-ls-9OZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Ws-DY-tvi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="32K-Fh-IW1" userLabel="iTap">
+                    <connections>
+                        <action selector="firstTapScreen:" destination="qEf-0k-VAm" id="WPI-m7-nsv"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="838" y="93"/>
+        </scene>
+        <!--Win-->
+        <scene sceneID="xJi-2w-gRP">
+            <objects>
+                <viewController id="7is-T4-ej7" customClass="Win" customModule="WarCardGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YxS-hK-DeF">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="0qw-g0-jjq">
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Victory" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rcv-5b-9R9">
+                                <rect key="frame" x="64.666666666666686" y="317.66666666666669" width="299" height="237.00000000000006"/>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="70"/>
+                                <color key="textColor" systemColor="systemYellowColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jt8-xG-FpY">
+                                <rect key="frame" x="20" y="574.66666666666663" width="388" height="250.33333333333337"/>
+                                <string key="text">"Always the victor writes the history of the vanquished. He who beats distorts the faces of the beaten. The weaker depart from this world and the lies remain."  -Bertolt Brecht, 1898-1956</string>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="s3l-GM-FPs"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="0qw-g0-jjq" secondAttribute="trailing" id="3O1-Fg-m6L"/>
+                            <constraint firstAttribute="bottom" secondItem="0qw-g0-jjq" secondAttribute="bottom" id="88i-Dk-l1A"/>
+                            <constraint firstItem="Rcv-5b-9R9" firstAttribute="centerY" secondItem="YxS-hK-DeF" secondAttribute="centerY" id="FgV-UT-Nex"/>
+                            <constraint firstItem="s3l-GM-FPs" firstAttribute="trailing" secondItem="jt8-xG-FpY" secondAttribute="trailing" constant="20" id="Ltp-zo-2W8"/>
+                            <constraint firstItem="Rcv-5b-9R9" firstAttribute="centerX" secondItem="YxS-hK-DeF" secondAttribute="centerX" id="Tcn-s6-elT"/>
+                            <constraint firstItem="0qw-g0-jjq" firstAttribute="top" secondItem="YxS-hK-DeF" secondAttribute="top" id="bIk-cU-0Vx"/>
+                            <constraint firstItem="0qw-g0-jjq" firstAttribute="leading" secondItem="YxS-hK-DeF" secondAttribute="leading" id="bqw-wQ-Ghg"/>
+                            <constraint firstItem="s3l-GM-FPs" firstAttribute="bottom" secondItem="jt8-xG-FpY" secondAttribute="bottom" constant="13" id="n3H-R2-F68"/>
+                            <constraint firstItem="jt8-xG-FpY" firstAttribute="leading" secondItem="s3l-GM-FPs" secondAttribute="leading" constant="20" id="tNe-Se-WLW"/>
+                            <constraint firstItem="jt8-xG-FpY" firstAttribute="top" secondItem="Rcv-5b-9R9" secondAttribute="bottom" constant="20" id="uHJ-6t-eeL"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="nhE-wO-41V" appends="YES" id="sBn-tL-Krw"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="AIl-hk-khG"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="returnW" id="BXC-G4-t0b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aKk-AJ-Pjr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="nhE-wO-41V">
+                    <connections>
+                        <action selector="tapScreen:" destination="7is-T4-ej7" id="vGR-uH-YgE"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1559" y="93"/>
+        </scene>
+        <!--Loss-->
+        <scene sceneID="eg9-Mp-9o0">
+            <objects>
+                <viewController id="6O1-vc-G7C" customClass="Loss" customModule="WarCardGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="exa-gb-Azl">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="DbL-ee-cqI">
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Defeat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0rH-eX-k6a">
+                                <rect key="frame" x="67.666666666666686" y="317.66666666666669" width="293" height="236.66666666666669"/>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="70"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KcK-kA-rQb">
+                                <rect key="frame" x="20" y="574.33333333333337" width="388" height="284.66666666666663"/>
+                                <string key="text">"France has lost the battle but she has not lost the war."   - Charles de Gaulle,  shortly before French surrender  (The Appeal of 18 June - 18/06/1940)</string>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9hx-zN-k9J"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="KcK-kA-rQb" firstAttribute="top" secondItem="0rH-eX-k6a" secondAttribute="bottom" constant="20" id="6d0-Wa-lgE"/>
+                            <constraint firstItem="9hx-zN-k9J" firstAttribute="trailing" secondItem="KcK-kA-rQb" secondAttribute="trailing" constant="20" id="6g3-LR-PZj"/>
+                            <constraint firstAttribute="bottom" secondItem="KcK-kA-rQb" secondAttribute="bottom" constant="13" id="HbE-c7-LNk"/>
+                            <constraint firstAttribute="bottom" secondItem="DbL-ee-cqI" secondAttribute="bottom" id="QOY-Zp-ByB"/>
+                            <constraint firstItem="0rH-eX-k6a" firstAttribute="centerY" secondItem="exa-gb-Azl" secondAttribute="centerY" id="WTN-bn-mHl"/>
+                            <constraint firstItem="KcK-kA-rQb" firstAttribute="leading" secondItem="9hx-zN-k9J" secondAttribute="leading" constant="20" id="WZP-dx-frG"/>
+                            <constraint firstAttribute="trailing" secondItem="DbL-ee-cqI" secondAttribute="trailing" id="WbM-c5-QEv"/>
+                            <constraint firstItem="DbL-ee-cqI" firstAttribute="top" secondItem="exa-gb-Azl" secondAttribute="top" id="Y2d-TM-qmn"/>
+                            <constraint firstItem="DbL-ee-cqI" firstAttribute="leading" secondItem="exa-gb-Azl" secondAttribute="leading" id="gSm-W5-tGW"/>
+                            <constraint firstItem="0rH-eX-k6a" firstAttribute="centerX" secondItem="exa-gb-Azl" secondAttribute="centerX" id="goa-eb-5mD"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Jqk-DM-erL" appends="YES" id="70I-He-Lag"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="P4X-jV-JRy"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="returnL" id="I0x-cJ-89n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tgn-A9-G1a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Jqk-DM-erL">
+                    <connections>
+                        <action selector="tapScreen:" destination="6O1-vc-G7C" id="kl9-x3-yn0"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2264.0186915887848" y="79.697624190064801"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="BXC-G4-t0b"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="back" width="120" height="170"/>
+        <image name="background" width="414" height="896"/>
+        <image name="dealbutton" width="81.666664123535156" height="31"/>
+        <image name="logo" width="122" height="67"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
